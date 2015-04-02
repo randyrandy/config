@@ -1,0 +1,35 @@
+### UTF-8 ###
+defutf8		on
+defc1		off
+defencoding	utf8
+bind b encoding big5 utf8
+bind u encoding utf8 utf8
+
+### xterm-256color ###
+attrcolor	b ".I"
+attrcolor	i "+b"
+defbce		"on"
+# also for blink characters
+termcapinfo	xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:mb=\E[5m:md=\E[1m:me=\E[m:mr=\E[7m'
+
+### fast forward/backward ###
+bindkey \033[A prev
+bindkey \033[B next
+
+### Other customized options ###
+bell_msg	"\007%{kR}Bell in window %n at %c on %Y/%M/%d"
+caption	always	"%{= Ky} [%l]%<%{= KC}%e%=%{= KW}@%H %=%{= KY} %Y %M %d(%D)  %C %A"
+crlf		off
+defscrollback	2000
+hardstatus alwayslastline   "%{=u .g}%?%-Lw%?%{=ub .C}%n*%f %t%?(%u)%?%{=u .g}%?%+Lw%?%="
+msgminwait	0
+msgwait		5
+shelltitle	"- |tcsh"
+startup_message	off
+vbell		on
+vbell_msg	"\007 Stop!!! "
+vbellwait	5
+
+### Default windows ###
+screen -t   "- |tcsh"   1
+screen -t   "- |tcsh"   0
