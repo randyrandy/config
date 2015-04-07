@@ -1,0 +1,65 @@
+alias	b2u	'piconv -f big5 -t utf-8'
+alias	df	'df -h'
+alias	du	'du -xh'
+alias	g	'egrep'
+alias	h	'history 20'
+alias	j	'jobs -l'
+alias	l	'last \!* | more'
+alias	ls	'ls -FG'
+alias	la	'ls -A'
+alias	ll	'la -lh'
+alias	lunar	'lunar -5 \!* | b2u'
+alias	m	'mutt'
+alias	mv	'mv -i'
+alias	p	'ping -c 4'
+alias	precmd	'echo -n k\\'
+alias	ps	'ps auxww'
+alias	rm	'rm -i'
+alias	s	'screen'
+alias	sr	'screen -r'
+alias	t	'zh-telnet'
+alias	w	'w \!* | sort'
+
+### Home/Ins/Del/End ###
+bindkey	"\e[1~"	beginning-of-line       # Home
+bindkey	"\e[2~"	overwrite-mode          # Ins
+bindkey	"\e[3~"	delete-char             # Del
+bindkey	"\e[4~"	end-of-line             # End
+
+### sudo/man/which/xargs completion ###
+complete	{sudo}	p/1/c/
+complete	{man}	p/1/c/
+complete	{which}	p/1/c/
+complete	{xargs}	p/1/c/
+
+### Environment variables ###
+# colored ls
+setenv	LS_COLORS	'no=0:fi=0:di=33:ln=1;34:pi=35:so=32:do=1;35:bd=1;36:cd=36:ex=1;31'
+# 256-colored ncurses
+setenv	TERM	xterm
+setenv	TERMCAP	"Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:mb=\E[5m:md=\E[1m:me=\E[m:mr=\E[7m:ti@:te@:tc=xterm-xfree86;"
+
+### tcsh settings ###
+set autocorrect
+set autoexpand
+set autolist
+set color
+set correct = all
+set edit
+set histdup = erase
+set inputmode = insert
+set listjobs = long
+set noclobber
+set notify
+set prompt2 = '(%t %m) %# '
+set prompt3 = '%SDo you mean [%R] (y/n/e) ? '
+set promptchars = '$#'
+set rmstar
+set savehist = (2000 merge)
+set symlinks = ignore
+set time = 60
+
+### For screen prompt ###
+if ( $?WINDOW ) then
+	set prompt = "%B%m%b [%/] W$WINDOW -%n- "
+endif
