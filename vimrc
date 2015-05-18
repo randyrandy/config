@@ -25,3 +25,9 @@ set softtabstop=4
 set t_Co=256
 set termencoding=utf-8
 set wrap
+
+if has('gui_running')
+  set guifont=Monaco:h12
+  set lines=34
+  set columns=178
+endif
