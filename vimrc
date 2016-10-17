@@ -4,6 +4,7 @@ set ambiwidth=double
 set background=dark
 set backspace=indent,eol,start
 set cindent
+set cinoptions=:0,g0
 set cmdheight=1
 set encoding=utf-8
 set fileencoding=utf-8
