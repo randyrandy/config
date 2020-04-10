@@ -24,6 +24,7 @@ set showcmd
 set showmode
 set softtabstop=4
 set t_Co=256
+set tabpagemax=100
 set termencoding=utf-8
 set wrap
 
