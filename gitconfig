@@ -1,0 +1,18 @@
+[http]
+    sslverify = false
+[user]
+    name = 
+    email = 
+[core]
+    editor = vim
+[color]
+    ui = auto
+[credential]
+    helper = store
+[diff]
+    algorithm = patience
+[alias]
+    tree = log --all --graph --decorate --pretty=oneline --abbrev-commit
+    attach = submodule foreach -q --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
+[push]
+	default = simple
