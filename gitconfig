@@ -1,5 +1,5 @@
 [http]
-    sslverify = false
+#    sslverify = false
 [user]
     name = 
     email = 
